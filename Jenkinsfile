@@ -12,6 +12,7 @@ pipeline {
                 sh '''
                 cd hello-world-war
                 mvn clean package
+                '''
             }
         }
 }
