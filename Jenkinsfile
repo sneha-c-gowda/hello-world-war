@@ -18,7 +18,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 sh '''
-                rm -rf /opt/apache-tomcat-10.1.50/webapps/*.war
+                sudo rm -rf /opt/apache-tomcat-10.1.50/webapps/*.war
                 scp target/*.war root@172.31.3.222 /opt/apache-tomcat-10.1.50/webapps/
 
                 '''
