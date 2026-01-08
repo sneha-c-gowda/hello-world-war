@@ -28,11 +28,7 @@ pipeline {
 
             ssh root@172.31.3.222 <<'EOF'
             set -e
-            cd /opt/apache-tomcat-10.1.50/bin
-            ./shutdown.sh || true
-            sleep 5
-            ./startup.sh
-            EOF
+            ssh root@172.31.3.222 "cd /opt/apache-tomcat-10.1.50/bin && ./shutdown.sh || true && sleep 5 && ./startup.sh"
         '''
             }
         }
