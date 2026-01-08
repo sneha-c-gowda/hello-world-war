@@ -21,9 +21,8 @@ pipeline {
                 sh '''
                 cd hello-world-war
                 scp target/*.war root@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
-                ssh root@172.31.3.222
-                whoami
-                pwd
+                ssh root@172.31.3.222 whoami
+                
                 '''
             }
         }
