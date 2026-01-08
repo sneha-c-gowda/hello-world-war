@@ -10,22 +10,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                cd hello-world-war
-                mvn clean package
-                '''
-            }
-        }
-         stage('Deploy') {
-            steps {
-                sh '''
                 pwd
-                scp target/*.war jenkins@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
-                ssh jenkins@172.31.3.222
-                cd /opt/apache-tomcat-10.1.50/bin/
-                ./shutdown.sh
-                ./startup.sh
+                ls -a
+                whoami
+                
                 '''
             }
         }
+    
     }
 }
