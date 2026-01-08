@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                 cd hello-world-war
-                scp target/*.war root@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
+                scp target/*.war jenkins@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
                
                 '''
             }
