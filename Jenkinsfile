@@ -23,13 +23,13 @@ pipeline {
 
             cd hello-world-war
 
-            scp target/*.war \
-              root@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
-
-            ssh root@172.31.3.222 <<'EOF'
-            set -e
-            ssh root@172.31.3.222 "cd /opt/apache-tomcat-10.1.50/bin && ./shutdown.sh || true && sleep 5 && ./startup.sh"
-        '''
+            scp target/*.war root@172.31.3.222:/opt/apache-tomcat-10.1.50/webapps/
+            ssh root@172.31.3.222 "
+            /opt/apache-tomcat-10.1.50/bin/shutdown.sh || true
+            sleep 5
+            /opt/apache-tomcat-10.1.50/bin/startup.sh
+            "
+            '''
             }
         }
 
