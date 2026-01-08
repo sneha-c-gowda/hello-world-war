@@ -11,13 +11,18 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                   cd hello-world-war
+                   mvn clean package
+                '''
+            }
+        }
+     stage('Deploy') {
+            steps {
+                sh '''
                 pwd
-                ls -a
-                whoami
                 
                 '''
             }
         }
-    
     }
 }
