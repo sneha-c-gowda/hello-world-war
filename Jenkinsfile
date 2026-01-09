@@ -3,11 +3,13 @@ pipeline {
 
     stages {
       stage ('commands'){
-        sh '''
-        pwd
-        ls
-        whoami
+        steps{
+          sh '''
+          pwd
+          ls
+          whoami
         '''
+        }
       }
     }
 }
