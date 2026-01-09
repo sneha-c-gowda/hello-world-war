@@ -17,6 +17,7 @@ pipeline {
         steps{
           sh '''
             pwd
+            sudo apt install net-tools -y
             netstat -tunlp
     
         '''
