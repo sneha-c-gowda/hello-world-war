@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'slave1' } 
+  agent { label 'Java_Env' } 
 
     stages {
       stage ('commands'){
