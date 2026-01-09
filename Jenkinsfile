@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage ('commands'){
       steps {
-        sh 'echo welocme to jenkins'
+        sh 'echo $Environment'
       }
     }
   }
