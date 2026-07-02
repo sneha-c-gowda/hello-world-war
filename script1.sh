@@ -4,4 +4,4 @@ pwd
 df -h
 mkdir -p dir1
 who
-echo "sneha baby "
+echo "sneha baby"
